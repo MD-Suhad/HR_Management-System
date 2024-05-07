@@ -1,0 +1,26 @@
+#spring.application.name=security
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1523/ORCL
+    username: LOGIN
+    password: LOGIN
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+     ddl-auto: create-drop
+    show-sql:  true
+    properties:
+      hibernate:
+         format_sql: true
+      database: oracle
+      database-platform: org.hibernate.dialect.Oracle11gDialect
+#server.port = 1523
+#spring.datasource.driver.class = oracle.jdbc.driver.OracleDriver
+#spring.datasource.url=jdbc: oracle:thin:@localhost:1523/LOGIN
+#spring.datasource.username = LOGIN
+#spring.datasource.password = LOGIN
+#spring.jpa.show-sql = true
+#spring.jpa.hibernate.ddl-auto = create
+#
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.Oracle12cDialect
+#spring.jpa.properties.hibernate.dialect.format_sql = true
