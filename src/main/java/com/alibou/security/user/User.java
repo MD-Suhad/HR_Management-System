@@ -54,9 +54,8 @@ public class User  implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-   @OneToMany(mappedBy = "user")
-   private List<Token> tokens;
-
+    @OneToMany(mappedBy = "user")
+    private List<Token> tokens;
 
 
     @Override
@@ -93,75 +92,5 @@ public class User  implements UserDetails {
     public boolean isEnabled() {
         return false;
     }
-
-
-//    public User()
-//    {
-//        super();
-//        //TODO AUTO_GENERATE CONSTRUCTOR
-//    }
-//    public User(int id,String firstName,String lastname, String email,String password,Date Birthday_Date,Date issue_Date){
-//        super();
-//        this.id = id;
-//        this.firstName = firstName;
-//        this.lastname = lastname;
-//        this.email = email;
-//        this.password = password;
-//        this.BirthDay_Date = Birthday_Date;
-//        this.issue_Date = issue_Date;
-//
-//    }
-//
-//    public int getId(){
-//        return id;
-//    }
-//    public void setId(int id){
-//        this.id = id;
-//    }
-//    public  String getFirstName(){
-//        return firstName;
-//    }
-//    public void setFirstName(String firstName){
-//         this.firstName = firstName;
-//    }
-//    public  String getLastName(){
-//        return lastname;
-//    }
-//    public void setLastName(String lastname){
-//       this.lastname = lastname;
-//    }
-//    public String getEmail(){
-//        return email;
-//    }
-//    public void setEmail(String email){
-//        this.email = email;
-//    }
-
-
-
-//    public String getPassword(){
-//        return password;
-//    }
-//    public void setPassword(String password){
-//        this.password = password;
-//    }
-//    public Date getBirthDay_Date(){
-//        return BirthDay_Date;
-//    }
-//    public void setBirthDay_Date(){
-//        this.BirthDay_Date = BirthDay_Date;
-//    }
-//    public Date getIssue_Date(){
-//        return issue_Date;
-//    }
-//    public void setIssue_Date(){
-//        this.issue_Date = issue_Date;
-//    }
-//
-//    public String toString(){
-//        return  "Users [ firstName = "+ firstName + ",lastname = " + lastname + ",email = "+ email + ",password = " + password +
-//                ",BirthDay_Date = " + BirthDay_Date + ",issue_Date = " + issue_Date + " ]";
-//    }
-
 
 }
