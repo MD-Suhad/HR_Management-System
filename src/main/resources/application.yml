@@ -1,13 +1,15 @@
 #spring.application.name=security
-server.port: 8085
+server.port: 8084
 spring:
+  main:
+    web-application-type: none
   datasource:
     url: jdbc:oracle:thin:@localhost:1521/XE
     username: HR_LOGIN
     password: HR_LOGIN
     oracle:
       jdbc:
-        driver: oracle.jdbc.driver.OracleDriver
+        OracleDriver: oracle.jdbc.driver.OracleDriver
 #    driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     hibernate:
@@ -17,7 +19,7 @@ spring:
       hibernate:
          format_sql: true
       database: oracle
-      database-platform: org.hibernate.dialect.Oracle11gDialect
+      database-platform: org.hibernate.dialect.Oracle12cDialect
 #server.port = 1523
 #spring.datasource.driver.class = oracle.jdbc.driver.OracleDriver
 #spring.datasource.url=jdbc: oracle:thin:@localhost:1523/LOGIN
