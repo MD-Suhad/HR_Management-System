@@ -10,4 +10,16 @@ public class Country {
     private String name;
 
     private String continent;
+
+    public Country(int countryId, String name, String continent) {
+    }
+
+    public void setCountryId(int countryId) {
+    }
+
+    public void setName(String name) {
+    }
+
+    public void setContinent(String continent) {
+    }
 }
