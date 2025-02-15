@@ -22,4 +22,16 @@ public class Country {
 
     public void setContinent(String continent) {
     }
+
+    public String getName() {
+        return null;
+    }
+
+    public String getContinent() {
+        return null;
+    }
+
+    public Object getCountryId() {
+        return null;
+    }
 }
