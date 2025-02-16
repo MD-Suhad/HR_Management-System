@@ -1,9 +1,5 @@
 package com.alibou.security.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 public class Country {
     private int countryId;
 
@@ -11,7 +7,7 @@ public class Country {
 
     private String continent;
 
-    public Country(int countryId, String name, String continent) {
+    public Country() {
     }
 
     public void setCountryId(int countryId) {
