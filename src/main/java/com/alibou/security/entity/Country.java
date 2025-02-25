@@ -9,6 +9,7 @@ import lombok.Setter;
 @JsonIgnoreProperties
 
 public class Country {
+    private Long id;
     private int countryId;
 
     private String name;
