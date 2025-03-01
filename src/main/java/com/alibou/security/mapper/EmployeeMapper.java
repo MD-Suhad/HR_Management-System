@@ -1,6 +1,5 @@
 package com.alibou.security.mapper;
 
-import com.alibou.security.dbo.EmployeeDto;
 import com.alibou.security.entity.Employee;
 
 public class EmployeeMapper {
