@@ -3,9 +3,7 @@ package com.alibou.security.utils;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import static org.eclipse.aether.repository.AuthenticationContext.PASSWORD;
-import static org.hibernate.cfg.JdbcSettings.URL;
-import static org.hibernate.cfg.JdbcSettings.USER;
+
 
 public class DatabaseConfig {
     private static final String URL = "jdbc:mysql://localhost:3306/suhad";
