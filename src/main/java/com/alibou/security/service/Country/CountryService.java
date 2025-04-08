@@ -1,12 +1,13 @@
 package com.alibou.security.service.Country;
 
+import com.alibou.security.dbo.CountryDAO;
 import com.alibou.security.entity.Country;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public interface CountryService {
-    List<Country> findAll(String search, int offset, int recordPerPage) throws SQLException;
+    List<CountryDAO> findAll() throws SQLException;
 
     boolean save(Country country) throws SQLException;
 
