@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface CountryService {
     List<CountryDAO> findAll() throws SQLException;
+    String Store(CountryDAO countryDAO) throws SQLException;
 
     boolean save(Country country) throws SQLException;
 

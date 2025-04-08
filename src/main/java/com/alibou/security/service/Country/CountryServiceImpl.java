@@ -18,6 +18,12 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
+    public String Store(CountryDAO countryDAO) throws SQLException {
+        Country country = new Country();
+        return null;
+    }
+
+    @Override
     public boolean save(Country country) throws SQLException {
         return false;
     }
