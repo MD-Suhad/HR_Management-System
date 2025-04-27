@@ -15,7 +15,7 @@ public class Country {
     private int countryId;
     private String name;
     private String continent;
-
+    private String countryCode;
 
 
 
