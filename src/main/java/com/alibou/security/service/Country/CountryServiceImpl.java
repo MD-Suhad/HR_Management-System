@@ -2,7 +2,6 @@ package com.alibou.security.service.Country;
 
 import com.alibou.security.dbo.CountryDAO;
 import com.alibou.security.entity.Country;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -16,7 +15,7 @@ public class CountryServiceImpl implements CountryService {
 
     @Override
     public String Store(CountryDAO countryDAO) throws SQLException {
-        Country country = new Country();
+        Country country = new Country(countryId, name, continent);
         return null;
     }
 
