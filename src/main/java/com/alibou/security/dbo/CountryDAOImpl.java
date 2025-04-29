@@ -25,7 +25,7 @@ public class CountryDAOImpl implements CountryDAO{
         preparedStatement.setInt(4, recordPerPage);
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
-            Country country = new Country(countryId, name, continent);
+            Country country = new Country();
             country.setCountryId(resultSet.getInt("country_id"));
             country.setName(resultSet.getString("name"));
             country.setContinent(resultSet.getString("continent"));
@@ -50,7 +50,6 @@ public class CountryDAOImpl implements CountryDAO{
         String update  = "Update country SET name = ?, continent = ? Where country_id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(update);
         preparedStatement.setString(1,country.getName());
-        preparedStatement.setString(2,country.getCountryCode());
         preparedStatement.setInt(3,country.getCountryId());
         return preparedStatement.executeUpdate() > 0;
     }
