@@ -15,7 +15,8 @@ public class CountryServiceImpl implements CountryService {
 
     @Override
     public String Store(CountryDAO countryDAO) throws SQLException {
-        Country country = new Country(countryId, name, continent);
+
+        Country country = new Country();
         return null;
     }
 
