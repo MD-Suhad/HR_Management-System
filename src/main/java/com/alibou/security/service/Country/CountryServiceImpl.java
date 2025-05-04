@@ -2,27 +2,32 @@ package com.alibou.security.service.Country;
 
 import com.alibou.security.dbo.CountryDAO;
 import com.alibou.security.entity.Country;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
 
+@Service
 public class CountryServiceImpl implements CountryService {
 
+    private CountryDAO countryDAO;
+
     @Override
-    public List<CountryDAO> findAll() throws SQLException {
-         return null;
+    public List<Country> findAll(String search, int offset, int recordPerPage) throws SQLException {
+         return countryDAO.findAll(search,offset,recordPerPage);
     }
 
     @Override
-    public String Store(CountryDAO countryDAO) throws SQLException {
-
-        Country country = new Country();
+    public String Store(Country country) throws SQLException {
+//
+//        return countryDAO.save(country);
         return null;
+
     }
 
     @Override
     public boolean save(Country country) throws SQLException {
-        return false;
+        return countryDAO.save(country);
     }
 
     @Override
