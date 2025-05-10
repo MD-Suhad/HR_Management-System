@@ -1,6 +1,6 @@
 package com.alibou.security.entity;
 
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
@@ -9,9 +9,15 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 public class Slot {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String type;
     private String ticketId;
+    @ManyToOne
+    private ParkingLot parkingLot;
     @OneToOne
     private Vehicle vehicle;
+
 }
