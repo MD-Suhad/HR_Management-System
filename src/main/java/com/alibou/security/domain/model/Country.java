@@ -1,4 +1,4 @@
-package com.alibou.security.entity;
+package com.alibou.security.domain.model;
 
 import lombok.*;
 

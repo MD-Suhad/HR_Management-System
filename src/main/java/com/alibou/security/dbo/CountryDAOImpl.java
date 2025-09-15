@@ -1,6 +1,6 @@
 package com.alibou.security.dbo;
 
-import com.alibou.security.entity.Country;
+import com.alibou.security.domain.model.Country;
 import com.alibou.security.utils.DatabaseConfig;
 
 import java.sql.Connection;

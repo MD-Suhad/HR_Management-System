@@ -1,7 +1,7 @@
 package com.alibou.security.controller.request;
 
-import com.alibou.security.entity.ParkingLot;
-import com.alibou.security.entity.Vehicle;
+import com.alibou.security.domain.model.ParkingLot;
+import com.alibou.security.domain.model.Vehicle;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -1,23 +1,24 @@
-package com.alibou.security.entity;
+package com.alibou.security.domain.model;
 
+
+import com.alibou.security.domain.model.Slot;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class ParkingLot {
-
+public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long parkingLotId;
-    @OneToMany
-    private List<Slot> slots;
+    private String type;
+    private String registration;
+    private String color;
+    @OneToOne
+    private Slot slot;
 }

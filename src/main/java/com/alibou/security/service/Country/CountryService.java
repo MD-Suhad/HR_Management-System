@@ -1,7 +1,6 @@
 package com.alibou.security.service.Country;
 
-import com.alibou.security.dbo.CountryDAO;
-import com.alibou.security.entity.Country;
+import com.alibou.security.domain.model.Country;
 
 import java.sql.SQLException;
 import java.util.List;

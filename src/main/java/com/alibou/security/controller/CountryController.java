@@ -1,6 +1,6 @@
 package com.alibou.security.controller;
 
-import com.alibou.security.entity.Country;
+import com.alibou.security.domain.model.Country;
 import com.alibou.security.service.Country.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

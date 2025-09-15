@@ -1,7 +1,7 @@
 package com.alibou.security.service.Country;
 
 import com.alibou.security.dbo.CountryDAO;
-import com.alibou.security.entity.Country;
+import com.alibou.security.domain.model.Country;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
