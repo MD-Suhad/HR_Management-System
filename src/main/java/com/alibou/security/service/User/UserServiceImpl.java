@@ -8,7 +8,6 @@ import com.alibou.security.service.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -39,13 +38,16 @@ public class UserServiceImpl implements UserService{
             throw new UserNotFoundException(String.format("User with username: '%s' already exists",
                     userDTO.getName()));
         }else{
-            User user = new User().setName(userDTO.getFirstName().replace(" ", "").toLowerCase() + userDTO.getLastName().replace(" ", "").toLowerCase() + String.format("%04d", number))
+            User user = new User()
+                    .setName(userDTO.getFirstName().replace(" ", "").toLowerCase() + userDTO.getLastName().replace(" ", "").toLowerCase() + String.format("%04d", number))
                     .setFirstName(userDTO.getFirstName())
                     .setLastName(userDTO.getLastName())
                     .setProfileImage("users/user-icon.png")
                     .setPhoneNumber(userDTO.getPhoneNumber())
                     .setAddress(userDTO.getAddress());
+            user = this.userRepository.save(user);
+            return "User Registration Successfully";
         }
-        return null;
+
     }
 }
