@@ -42,5 +42,6 @@ public class UserStoreAndUpdateRequest {
     @NotEmpty(message = "Accepting Terms and Conditions is required")
     @Size(min = 4, max = 5, message = "Value must be either true or false")
     private String acceptTerms;
+    private String name;
 
 }

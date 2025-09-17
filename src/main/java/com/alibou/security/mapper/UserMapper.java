@@ -14,7 +14,7 @@ public class UserMapper {
                 .setId(user.getId())
                 .setName(user.getName())
                 .setRole(user.getRole())
-                .setPhone(user.getPhone())
+                .setPhoneNumber(user.getPhoneNumber())
                 .setUpdateAt(user.getUpdateAt())
                 .setCreateAt(user.getCreateAt());
 
