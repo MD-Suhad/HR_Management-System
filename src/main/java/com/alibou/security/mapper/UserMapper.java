@@ -15,8 +15,11 @@ public class UserMapper {
                 .setName(user.getName())
                 .setRole(user.getRole())
                 .setPhoneNumber(user.getPhoneNumber())
-                .setUpdateAt(user.getUpdateAt())
-                .setCreateAt(user.getCreateAt());
+                .setPassword(user.getPassword())
+                .setAddress(user.getAddress())
+                .setRole(user.getRole())
+                .setFirstName(user.getFirstName())
+                .setLastName(user.getLastName());
 
     }
     public static List<UserDTO> map(List<User> users){

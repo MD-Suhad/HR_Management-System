@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService{
     public String store(UserDTO userDTO) throws UserNotFoundException {
         Random rnd = new Random();
         int number = rnd.nextInt(9999);
-        Optional<User> foundUser = userRepository.findByUsername(userDTO.getName());
+        Optional<User> foundUser = userRepository.findByName(userDTO.getName());
         if(foundUser.isPresent()){
             throw new UserNotFoundException(String.format("User with username: '%s' already exists",
                     userDTO.getName()));

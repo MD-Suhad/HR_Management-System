@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.Accessors;
 
-import java.sql.Date;
 
 @Data
 @Builder
@@ -28,7 +27,4 @@ public class User {
     private String role;
     private String address;
     private String profileImage;
-    private Date createAt;
-    private Date updateAt;
-
 }
