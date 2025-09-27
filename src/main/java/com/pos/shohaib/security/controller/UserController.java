@@ -6,7 +6,6 @@ import com.pos.shohaib.security.service.User.UserService;
 import com.pos.shohaib.security.service.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +17,6 @@ import javax.validation.Valid;
 @RestController
 @Validated
 @RequestMapping("/api/v1/auth")
-@Controller
 public class UserController {
     @Autowired
     private UserService userService;
