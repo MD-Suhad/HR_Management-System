@@ -5,6 +5,7 @@ import com.pos.shohaib.security.domain.model.User;
 import com.pos.shohaib.security.domain.repository.UserRepository;
 import com.pos.shohaib.security.dto.model.UserDTO;
 import com.pos.shohaib.security.service.exception.UserNotFoundException;
+import jdk.jshell.spi.ExecutionControl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -159,7 +160,7 @@ public class UserServiceImpl implements UserService{
 
     @Transactional
     @Override
-    public String restore(Long id) throws UserException {
+    public String restore(Long id) throws ExecutionControl.UserException {
         Optional<User> user;
         try {
             user = this.getByIdTrashed(id);
