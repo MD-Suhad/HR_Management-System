@@ -22,6 +22,7 @@ public interface UserService {
    public void checkForPasswords(String password, String confirmPassword)
            throws PasswordsDontMatchException;
    public boolean checkForOldPassword(String username, String oldPassword) throws UserNotFoundException;
+   public String deleteProfileImage(String username, String token) throws UserNotFoundException;
    UserDTO show(Long id) throws UserNotFoundException;
    String store(UserDTO userDTO) throws UserNotFoundException;
 }
